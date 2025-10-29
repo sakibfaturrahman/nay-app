@@ -6,7 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Favicon -->
-   
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            animation: {
+              "fade-in": "fadeIn 0.5s ease-out",
+              "slide-up": "slideUp 0.5s ease-out",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideUp: {
+                "0%": { transform: "translateY(20px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Tambahkan animasi sederhana -->
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      .animate-fadeIn {
+        animation: fadeIn 0.4s ease-out;
+      }
+    </style>
 
     <!-- Animate Style -->
     <link
@@ -51,20 +93,21 @@
             <li>
               <a href="#home"> <i class="fa-solid fa-house"></i>Home</a>
             </li>
-            <!-- <li>
-              <a href="#best"
-                ><i class="fa-solid fa-star"></i>Best Destination</a
-              >
-            </li> -->
             <li>
-              <a href="#services"><i class="fa-solid fa-list"></i>Quote</a>
+              <a href="#about"><i class="fa-solid fa-list"></i>About</a>
             </li>
             <li>
               <a href="#gallery"><i class="fa-solid fa-image"></i>Gallery</a>
             </li>
           </ul>
           <!-- Changed from a scroll button to a direct download link for the birthday PDF -->
-            <a href="../../public/selamatberulangtahun.pdf" download class="about-button" style="text-decoration: none;">Click Here!</a>
+          <a
+            href="../../public/selamatberulangtahun.pdf"
+            download
+            class="about-button"
+            style="text-decoration: none"
+            >Click Here!</a
+          >
           <button class="hamburger hamburger--spin" type="button">
             <span class="hamburger-box">
               <span class="hamburger-inner"></span>
@@ -79,27 +122,27 @@
           </h1>
           <div class="hero-jargon">
             <div class="animate__animated animate__fadeInUp animate__delay-1s">
-                <p>
+              <p>
                 <span>
-                    Selamat ulang tahun yang ke-19, nayaa. 
-                    Di antara hembusan angin yang membawa kenangan,  
-                    hari ini semesta kembali menulis namamu dengan cahaya lembut.  
-                    Waktu berputar, namun senyummu tetap menjadi musim  
-                    yang membuat hari-hari terasa lebih hangat dan bermakna.
+                  Selamat ulang tahun yang ke-19, viani. Di antara hembusan
+                  angin yang membawa kenangan, hari ini semesta kembali menulis
+                  namamu dengan cahaya lembut. Waktu berputar, namun senyummu
+                  tetap menjadi musim yang membuat hari-hari terasa lebih hangat
+                  dan bermakna.
                 </span>
-                </p>
+              </p>
             </div>
             <div class="animate__animated animate__fadeInUp animate__delay-1s">
-                <p>
+              <p>
                 <span>
-                    Bertambahnya usia bukan sekadar hitungan tahun,  
-                    melainkan kisah yang tumbuh bersama harapan dan keberanian.  
-                    Semoga langkah nayaa selalu diterangi cahaya ketenangan,  
-                    setiap doa menemukan jalannya,  
-                    dan setiap impian mendekat perlahan ke pelukan nyata. 
-                    Teruslah bersinar, nayaa — dengan cara yang paling lembut dan tulus.
+                  Bertambahnya usia bukan sekadar hitungan tahun, melainkan
+                  kisah yang tumbuh bersama harapan dan keberanian. Semoga
+                  langkah viani selalu diterangi cahaya ketenangan, setiap doa
+                  menemukan jalannya, dan setiap impian mendekat perlahan ke
+                  pelukan nyata. Teruslah bersinar, viani — dengan cara yang
+                  paling lembut dan tulus.
                 </span>
-                </p>
+              </p>
             </div>
           </div>
         </div>
@@ -319,88 +362,87 @@
     </section> -->
     <!-- Gallery -->
 
-    <!-- About Us -->
-    <section class="about" id="about">
-      <div class="container">
-        <div class="about-box">
-          <div class="box">
-            <h1 data-aos="fade-up">About She</h1>
-            <p data-aos="fade-up" data-aos-delay="200">
-             Ini adalah bagaimana saya mendeskripsikan dia.
-            </p>
+    <!-- Popup Overlay -->
+    <div
+      class="fixed inset-0 bg-black/30 backdrop-blur-md transition-opacity hidden"
+      id="popup-overlay"
+    ></div>
+
+    <!-- Popup Modal -->
+    <div
+      id="popup"
+      class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/20 backdrop-blur-md animate-fadeIn"
+      aria-labelledby="modal-title"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div
+        class="relative w-full max-w-md p-6 rounded-3xl border border-white/30 bg-white/10 backdrop-blur-3xl shadow-[0_8px_40px_rgba(0,0,0,0.25)] transition-all duration-500 ease-out scale-95 hover:scale-100"
+      >
+        <!-- Glass gradient overlay -->
+        <div
+          class="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/10 via-pink-200/10 to-purple-200/10 pointer-events-none"
+        ></div>
+
+        <!-- Content -->
+        <div class="relative z-10 text-center space-y-4">
+          <!-- Ikon musik -->
+          <div
+            class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-purple-500 to-pink-400 shadow-lg shadow-purple-300/40 backdrop-blur-md"
+          >
+            <i class="fa-solid fa-music text-white text-2xl drop-shadow-md"></i>
           </div>
-          <div class="box">
-            <div data-aos="fade-up" data-aos-delay="400">
-              <img src="assets/images/img11.jpg" alt="unsplash.com" />
-            </div>
-            <div data-aos="fade-down" data-aos-delay="400">
-              <h2>Who's she?</h2>
 
-              <p>
-                Dia adalah seseorang yang kutemui di masa terakhir putih
-                abu-abuku. Dia juga adalah seseorang yang membawa warna baru
-                dalam hidupku.</p>
+          <h3
+            class="text-2xl font-semibold text-white drop-shadow-lg"
+            id="modal-title"
+          >
+            Putar musik lembut?
+          </h3>
 
-               <p>Dia indah, dia sempurna, melihat senyumnya dari kejauhan
-                sudah membuatku bahagia. Aku sangat bahagia melihatnya bahagia,
-                selalu dan selamanya.</p><br>
+          <p class="text-sm text-white/90 leading-relaxed tracking-wide px-2">
+            Biarkan alunan musik mengiringi setiap momen indah hari ini. Melodi
+            yang lembut akan membuat suasana terasa lebih hangat, tenang, dan
+            bermakna.
+          </p>
+        </div>
 
-                <p>Jauh didalam lubuk hatiku, tersimpan harapan kecil yang tak
-                terucap, ingin suatu hari menyapanya, meski aku tahu ,aku tak
-                pantas untuk ada sampingnya.</p><br>
-
-                 <p>Aku mengagumi dan menyukai hal-hal
-                  indah yang jauh seperti langit, senja, bulan dan, kamu. rasa
-                  suka dan kagumku pada keindahan tersebut menyadarkan aku bawah
-                  meski aku menyukainya, bukan berarti aku harus memilikinya juga.</p><br>
-
-               <p> Dia perempuan yang sangat hebat, dia juga begitu sempurna, maka
-                dari itu aku berharap dia selalu bahagia, dengan siapapun dia
-                nantinya dan dimana pun dia berada, aku akan selalu
-                mendoakannya. </p><br>
-
-                <p>Semesta juga harus tahu, sebelum aku merelakan
-                  nya, aku sangat mencintai pemilik senyum yang indah itu,bahkan
-                  aku menaruh harapan yang tinggi padanya hingga aku menyadari,
-                  orang sepertiku tidak berhak menyukai langit, apalagi
-                  memilikinya. </p><br>
-
-               <p> Aku hanya akan mencintai dan mengaguminya dari
-                kejauhan, tanpa tegur sapa, tanpa mengganggu, dan tanpa
-                chatingan. setidaknya itulah yang bisa kulakukan agar dia bisa
-                berbahagia dengan sendirinya Terima kasih, Tuhan, sudah
-                mempertemukan aku dengannya, dariku untuknya, dengan hati yang
-                masih setengah berharap dan setengah ikhlas. </p><br>
-
-               <p> aku berharap agar
-                kita dapat bertemu kembali suatu hari nanti dengan versi terbaik
-                dari sebelumnya , pada hari itu aku ingin menyampaikan kembali
-                isi dari lubuk hatiku ini , walaupun pada akhirnya tetap sama
-                saja seperti sebelumnya tapi aku bahagia jika kita bisa bertemu
-                kembali.</p>
-              </p>
-            </div>
-          </div>
+        <!-- Tombol -->
+        <div
+          class="relative z-10 mt-6 flex flex-col sm:flex-row-reverse gap-3 justify-center"
+        >
+          <button
+            type="button"
+            onclick="playMusic()"
+            class="flex w-full sm:w-auto justify-center rounded-xl bg-gradient-to-r from-pink-500/80 to-purple-500/80 text-white px-5 py-2.5 text-sm font-medium shadow-md hover:from-pink-500 hover:to-purple-600 transform transition-all duration-300 hover:scale-[1.05] backdrop-blur-sm"
+          >
+            Ya, nyalakan musik 🎵
+          </button>
+          <button
+            type="button"
+            onclick="closePopup()"
+            class="flex w-full sm:w-auto justify-center rounded-xl border border-white/40 bg-white/20 backdrop-blur-md px-5 py-2.5 text-sm font-medium text-white/90 hover:bg-white/30 hover:text-white transform transition-all duration-300 hover:scale-[1.05]"
+          >
+            Tidak dulu
+          </button>
         </div>
       </div>
-    </section>
-    <!-- About Us -->
+    </div>
 
- <div class="popup-overlay"></div>
-<div class="popup" id="popup">
-  <p>Mainkan musik?</p>
-  <button onclick="playMusic()">Ya</button>
-  <button onclick="closePopup()">Tidak</button>
-</div>
-    <audio id="music" src="assets/musik/lagu.mp3"></audio>
+    <!-- Animasi lembut muncul -->
+
+    <audio id="music" src="../../public/assets/music/perfect.mp3"></audio>
 
     <!-- Footer -->
     <section class="footer">
       <div class="container">
         <div class="footer-box">
           <p>
-            &copy; Copyright by <span>Someone</span> 2024, All Right
-            Reserved.
+            &copy; Copyright by
+            <a href="https://sakibftrrhmn.vercel.app/"
+              ><span>sakibftrrhmn</span></a
+            >
+            2025, All Right Reserved.
           </p>
         </div>
       </div>
@@ -446,47 +488,62 @@
       });
     </script>
 
+    <script>
+      const popup = document.getElementById("popup");
+      const overlay = document.getElementById("popup-overlay");
+      const music = document.getElementById("music");
 
+      // Fungsi untuk menampilkan popup dengan animasi
+      function showPopup() {
+        // Show overlay with fade
+        overlay.classList.remove("hidden");
+        overlay.classList.add("animate-fade-in");
 
-<script>
-  const aboutSection = document.getElementById('about');
-  const popup = document.querySelector('.popup');
-  const overlay = document.querySelector('.popup-overlay');
-  const music = document.getElementById('music');
-  let hasShownPopup = false;
+        // Show popup with slide up
+        popup.classList.remove("hidden");
+        popup.classList.add("animate-slide-up");
 
-  function scrollToAbout() {
-    const aboutSection = document.getElementById("about");
-    aboutSection.scrollIntoView({ behavior: "smooth" }); // Scroll halus
-  }
+        // Handle escape key
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") closePopup();
+        });
 
-  // Deteksi scroll sampai ke section "about"
-  window.addEventListener('scroll', function() {
-    const sectionPosition = aboutSection.getBoundingClientRect();
-    if (sectionPosition.top < window.innerHeight && sectionPosition.bottom >= 0 && !hasShownPopup) {
-      showPopup();
-      hasShownPopup = true;
-    }
-  });
+        // Handle click outside
+        overlay.addEventListener("click", closePopup);
+      }
 
-  // Tampilkan pop-up
-  function showPopup() {
-    popup.style.display = 'block';
-    overlay.style.display = 'block';
-  }
+      // Fungsi untuk memutar musik
+      function playMusic() {
+        music
+          .play()
+          .then(() => {
+            closePopup();
+          })
+          .catch((error) => {
+            console.error("Error playing music:", error);
+          });
+      }
 
-  // Putar musik ketika tombol "Ya" ditekan
-  function playMusic() {
-    music.play(); // Mulai putar musik
-    closePopup(); // Tutup pop-up
-  }
+      // Fungsi untuk menutup popup dengan animasi
+      function closePopup() {
+        // Fade out overlay
+        overlay.classList.add("opacity-0");
+        popup.classList.add("opacity-0");
 
-  // Tutup pop-up
-  function closePopup() {
-    popup.style.display = 'none';
-    overlay.style.display = 'none';
-  }
-</script>
+        // Remove elements after animation
+        setTimeout(() => {
+          overlay.classList.add("hidden");
+          overlay.classList.remove("opacity-0");
+          popup.classList.add("hidden");
+          popup.classList.remove("opacity-0");
+        }, 300);
+      }
+
+      // Tampilkan popup otomatis saat halaman selesai dimuat
+      window.addEventListener("load", function () {
+        setTimeout(showPopup, 1000); // jeda 1 detik biar lebih halus
+      });
+    </script>
 
     <!-- AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

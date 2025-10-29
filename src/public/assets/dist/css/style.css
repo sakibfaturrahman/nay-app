@@ -49,6 +49,24 @@
   background-repeat: no-repeat;
   padding-bottom: 50px;
 }
+.about-header {
+  width: 100%;
+  background-image: linear-gradient(var(--color-black-6), var(--color-black-6)),
+    url(../../../image/about.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 50px;
+}
+.gallery-header {
+  width: 100%;
+  background-image: linear-gradient(var(--color-black-6), var(--color-black-6)),
+    url(../../../image/gallery.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 50px;
+}
 
 .navbar {
   width: 100%;

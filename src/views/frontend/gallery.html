@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery Viani</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: 0 },
+                "100%": { opacity: 1 },
+              },
+              zoomIn: {
+                "0%": { transform: "scale(0.9)", opacity: 0 },
+                "100%": { transform: "scale(1)", opacity: 1 },
+              },
+            },
+            animation: {
+              fadeIn: "fadeIn 0.3s ease-out",
+              zoomIn: "zoomIn 0.3s ease-out",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <!-- Jonsuh Hamburger -->
+    <link rel="stylesheet" href="../../public/assets/dist/css/hamburgers.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../public/assets/dist/css/style.css" />
+  </head>
+  <body class="bg-white text-gray-900 font-sans">
+    <!-- Navbar -->
+    <section class="gallery-header">
+      <div class="container">
+        <div class="navbar">
+          <div class="logo-nav">
+            <!-- logo (optional) -->
+          </div>
+          <ul class="menu">
+            <li>
+              <a href="#home"><i class="fa-solid fa-house"></i>Home</a>
+            </li>
+            <li>
+              <a href="#about"><i class="fa-solid fa-list"></i>About</a>
+            </li>
+            <li>
+              <a href="#gallery"><i class="fa-solid fa-image"></i>Gallery</a>
+            </li>
+          </ul>
+          <a
+            href="../../public/selamatberulangtahun.pdf"
+            download
+            class="about-button"
+            style="text-decoration: none"
+            >Click Here!</a
+          >
+          <button class="hamburger hamburger--spin" type="button">
+            <span class="hamburger-box"
+              ><span class="hamburger-inner"></span
+            ></span>
+          </button>
+        </div>
+        <div class="hero">
+          <h1 class="animate__animated animate__fadeInUp animate__delay-3s">
+            <span id="t1">About Viani</span> <br />
+            <span id="t2">Her Presence Speaks Where Words Fall Silent</span>
+          </h1>
+          <div class="hero-jargon">
+            <div class="animate__animated animate__fadeInUp animate__delay-1s">
+              <p>
+                <span>
+                  Tentang seseorang yang tak hanya hadir di mataku, tapi juga
+                  menetap di pikiranku dengan cara yang tak pernah kuminta.
+                  Kehadirannya sederhana, tapi cukup untuk membuat dunia di
+                  sekitarku terasa berbeda. Ada sesuatu dalam caranya tersenyum,
+                  dalam tatapannya yang tenang, seolah waktu berhenti hanya
+                  untuk membiarkanku menikmati detik itu.</span
+                >
+              </p>
+            </div>
+            <div class="animate__animated animate__fadeInUp animate__delay-1s">
+              <p>
+                <span>
+                  Aku tidak tahu bagaimana semuanya dimulai, tapi sejak saat
+                  itu, setiap pagi terasa lebih hangat, dan setiap senja membawa
+                  namanya dalam diam. Dia bukan sekadar seseorang yang lewat,
+                  dia adalah bagian kecil dari hidupku yang tanpa kusadari telah
+                  tumbuh menjadi besar.</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="pt-20 pb-16 px-4">
+      <div class="max-w-6xl mx-auto text-center mb-10">
+        <h2 class="text-3xl font-semibold mb-2">Galeri Kenangan</h2>
+        <p class="text-gray-600">
+          Setiap gambar menyimpan kisah, setiap senyum membawa makna yang tak
+          terucap.
+        </p>
+      </div>
+
+      <!-- Grid -->
+      <div
+        class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-6xl mx-auto"
+      >
+        <!-- Gambar contoh -->
+        <div
+          class="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-md cursor-pointer group"
+          onclick="openModal('1.jpg','Momen sederhana yang berarti banyak.')"
+        >
+          <img
+            src="../../public/image/1.jpg"
+            alt="viani"
+            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
+
+        <div
+          class="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-md cursor-pointer group"
+          onclick="openModal('2.jpg','Senyum lembut di antara cahaya sore hari.')"
+        >
+          <img
+            src="../../public/image/2.jpg"
+            alt="viani"
+            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
+
+        <div
+          class="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-md cursor-pointer group"
+          onclick="openModal('3.jpg','Tatapan yang menenangkan, sederhana tapi berarti.')"
+        >
+          <img
+            src="../../public/image/3.jpg"
+            alt="viani"
+            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
+
+        <div
+          class="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-md cursor-pointer group"
+          onclick="openModal('4.jpg','Kenangan kecil yang tak akan pudar.')"
+        >
+          <img
+            src="../../public/image/4.jpg"
+            alt="viani"
+            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div
+      id="imageModal"
+      class="hidden fixed inset-0 bg-black/60 backdrop-blur-md z-50 flex items-center justify-center animate-fadeIn"
+    >
+      <div
+        class="relative bg-white rounded-3xl max-w-md w-11/12 shadow-2xl animate-zoomIn overflow-hidden"
+      >
+        <button
+          class="absolute top-3 right-3 bg-gray-800/60 text-white rounded-full p-2 hover:bg-gray-900 transition"
+          onclick="closeModal()"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <img
+          id="modalImage"
+          src=""
+          alt="Preview"
+          class="w-full aspect-[3/4] object-cover"
+        />
+
+        <div class="p-5 text-center space-y-3">
+          <p id="modalDescription" class="text-gray-700 text-sm"></p>
+          <div class="flex justify-center gap-3 pt-2">
+            <a
+              id="shareInstagram"
+              target="_blank"
+              class="h-10 w-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white text-lg shadow-md hover:scale-110 transition"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              id="shareTwitter"
+              target="_blank"
+              class="h-10 w-10 rounded-full bg-sky-500 flex items-center justify-center text-white text-lg shadow-md hover:scale-110 transition"
+            >
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a
+              id="shareWhatsapp"
+              target="_blank"
+              class="h-10 w-10 rounded-full bg-green-500 flex items-center justify-center text-white text-lg shadow-md hover:scale-110 transition"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function openModal(image, desc) {
+        document.getElementById("modalImage").src =
+          "../../public/image/" + image;
+        document.getElementById("modalDescription").innerText = desc;
+
+        // Share link dinamis
+        const url = window.location.href;
+        document.getElementById("shareInstagram").href =
+          "https://www.instagram.com/";
+        document.getElementById("shareTwitter").href =
+          "https://twitter.com/intent/tweet?text=" +
+          encodeURIComponent(desc + " " + url);
+        document.getElementById("shareWhatsapp").href =
+          "https://wa.me/?text=" + encodeURIComponent(desc + " " + url);
+
+        document.getElementById("imageModal").classList.remove("hidden");
+      }
+
+      function closeModal() {
+        document.getElementById("imageModal").classList.add("hidden");
+      }
+    </script>
+  </body>
+</html>

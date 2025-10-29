@@ -4,17 +4,17 @@ const path = require("path");
 
 // Halaman utama (Home)
 router.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../views/index.html"));
+  res.sendFile(path.join(__dirname, "../views/frontend/index.html"));
 });
 
 // Halaman About
 router.get("/about", (req, res) => {
-  res.sendFile(path.join(__dirname, "../views/about.html"));
+  res.sendFile(path.join(__dirname, "../views/frontend/about.html"));
 });
 
 // Halaman Gallery
 router.get("/gallery", (req, res) => {
-  res.sendFile(path.join(__dirname, "../views/gallery.html"));
+  res.sendFile(path.join(__dirname, "../views/frontend/gallery.html"));
 });
 
 // Dashboard admin

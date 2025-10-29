@@ -1,61 +1,133 @@
-<section class="about" id="about"></section>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Ibnatun Octaviani Jahroo Fatihah</title>
+    <!-- Animate Style -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            animation: {
+              "fade-in": "fadeIn 0.5s ease-out",
+              "slide-up": "slideUp 0.5s ease-out",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideUp: {
+                "0%": { transform: "translateY(20px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <!-- Jonsuh Hamburger -->
+    <link rel="stylesheet" href="../../public/assets/dist/css/hamburgers.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../public/assets/dist/css/style.css" />
+
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      .animate-fadeIn {
+        animation: fadeIn 0.4s ease-out;
+      }
+    </style>
+  </head>
+  <body id="about-page">
+    <!-- Header -->
+    <section class="about-header">
       <div class="container">
-        <div class="about-box">
-          <div class="box">
-            <h1 data-aos="fade-up">About She</h1>
-            <p data-aos="fade-up" data-aos-delay="200">
-             Ini adalah bagaimana saya mendeskripsikan dia.
-            </p>
+        <div class="navbar">
+          <div class="logo-nav">
+            <!-- logo (optional) -->
           </div>
-          <div class="box">
-            <div data-aos="fade-up" data-aos-delay="400">
-              <img src="assets/images/img11.jpg" alt="unsplash.com" />
-            </div>
-            <div data-aos="fade-down" data-aos-delay="400">
-              <h2>Who's she?</h2>
-
+          <ul class="menu">
+            <li>
+              <a href="#home"><i class="fa-solid fa-house"></i>Home</a>
+            </li>
+            <li>
+              <a href="#about"><i class="fa-solid fa-list"></i>About</a>
+            </li>
+            <li>
+              <a href="#gallery"><i class="fa-solid fa-image"></i>Gallery</a>
+            </li>
+          </ul>
+          <a
+            href="../../public/selamatberulangtahun.pdf"
+            download
+            class="about-button"
+            style="text-decoration: none"
+            >Click Here!</a
+          >
+          <button class="hamburger hamburger--spin" type="button">
+            <span class="hamburger-box"
+              ><span class="hamburger-inner"></span
+            ></span>
+          </button>
+        </div>
+        <div class="hero">
+          <h1 class="animate__animated animate__fadeInUp animate__delay-3s">
+            <span id="t1">About Viani</span> <br />
+            <span id="t2">Her Presence Speaks Where Words Fall Silent</span>
+          </h1>
+          <div class="hero-jargon">
+            <div class="animate__animated animate__fadeInUp animate__delay-1s">
               <p>
-                Dia adalah seseorang yang kutemui di masa terakhir putih
-                abu-abuku. Dia juga adalah seseorang yang membawa warna baru
-                dalam hidupku.</p>
-
-               <p>Dia indah, dia sempurna, melihat senyumnya dari kejauhan
-                sudah membuatku bahagia. Aku sangat bahagia melihatnya bahagia,
-                selalu dan selamanya.</p><br>
-
-                <p>Jauh didalam lubuk hatiku, tersimpan harapan kecil yang tak
-                terucap, ingin suatu hari menyapanya, meski aku tahu ,aku tak
-                pantas untuk ada sampingnya.</p><br>
-
-                 <p>Aku mengagumi dan menyukai hal-hal
-                  indah yang jauh seperti langit, senja, bulan dan, kamu. rasa
-                  suka dan kagumku pada keindahan tersebut menyadarkan aku bawah
-                  meski aku menyukainya, bukan berarti aku harus memilikinya juga.</p><br>
-
-               <p> Dia perempuan yang sangat hebat, dia juga begitu sempurna, maka
-                dari itu aku berharap dia selalu bahagia, dengan siapapun dia
-                nantinya dan dimana pun dia berada, aku akan selalu
-                mendoakannya. </p><br>
-
-                <p>Semesta juga harus tahu, sebelum aku merelakan
-                  nya, aku sangat mencintai pemilik senyum yang indah itu,bahkan
-                  aku menaruh harapan yang tinggi padanya hingga aku menyadari,
-                  orang sepertiku tidak berhak menyukai langit, apalagi
-                  memilikinya. </p><br>
-
-               <p> Aku hanya akan mencintai dan mengaguminya dari
-                kejauhan, tanpa tegur sapa, tanpa mengganggu, dan tanpa
-                chatingan. setidaknya itulah yang bisa kulakukan agar dia bisa
-                berbahagia dengan sendirinya Terima kasih, Tuhan, sudah
-                mempertemukan aku dengannya, dariku untuknya, dengan hati yang
-                masih setengah berharap dan setengah ikhlas. </p><br>
-
-               <p> aku berharap agar
-                kita dapat bertemu kembali suatu hari nanti dengan versi terbaik
-                dari sebelumnya , pada hari itu aku ingin menyampaikan kembali
-                isi dari lubuk hatiku ini , walaupun pada akhirnya tetap sama
-                saja seperti sebelumnya tapi aku bahagia jika kita bisa bertemu
-                kembali.</p>
+                <span>
+                  Tentang seseorang yang tak hanya hadir di mataku, tapi juga
+                  menetap di pikiranku dengan cara yang tak pernah kuminta.
+                  Kehadirannya sederhana, tapi cukup untuk membuat dunia di
+                  sekitarku terasa berbeda. Ada sesuatu dalam caranya tersenyum,
+                  dalam tatapannya yang tenang, seolah waktu berhenti hanya
+                  untuk membiarkanku menikmati detik itu.</span
+                >
+              </p>
+            </div>
+            <div class="animate__animated animate__fadeInUp animate__delay-1s">
+              <p>
+                <span>
+                  Aku tidak tahu bagaimana semuanya dimulai, tapi sejak saat
+                  itu, setiap pagi terasa lebih hangat, dan setiap senja membawa
+                  namanya dalam diam. Dia bukan sekadar seseorang yang lewat,
+                  dia adalah bagian kecil dari hidupku yang tanpa kusadari telah
+                  tumbuh menjadi besar.</span
+                >
               </p>
             </div>
           </div>
@@ -63,72 +135,192 @@
       </div>
     </section>
 
-    <section class="about" id="about-you">
+    <!-- About She -->
+    <section class="about" id="about">
       <div class="container">
         <div class="about-box">
           <div class="box">
-            <h1 data-aos="fade-up">About You</h1>
+            <h1 data-aos="fade-up">About viani</h1>
             <p data-aos="fade-up" data-aos-delay="200">
-              Ini adalah bagaimana kamu mendeskripsikan dirimu.
+              Ini adalah bagaimana saya mendeskripsikan viani.
             </p>
           </div>
           <div class="box">
             <div data-aos="fade-up" data-aos-delay="400">
-              <img src="assets/images/img12.jpg" alt="unsplash.com" />
+              <img src="../../public/image/3.jpg" alt="unsplash.com" />
             </div>
             <div data-aos="fade-down" data-aos-delay="400">
-              <h2>Who's You?</h2>
-
+              <h2>Who's viani?</h2>
               <p>
-                Aku adalah seseorang yang sederhana, yang mencoba untuk selalu
-                memberikan yang terbaik dalam setiap langkah hidupku. Aku percaya
-                bahwa setiap orang memiliki ceritanya sendiri, dan inilah ceritaku.
+                Dia kutemui di saat dunia terasa sunyi, namun kehadirannya
+                tiba-tiba membuat segalanya terasa hidup kembali. Saat pandangan
+                pertama, ada sesuatu yang berbeda — seolah waktu berhenti hanya
+                untuk mempertemukanku dengannya.
               </p>
-
               <p>
-                Dalam keseharianku, aku selalu berusaha untuk menjadi versi
-                terbaik dari diriku. Aku menikmati setiap momen kehidupan,
-                baik itu saat suka maupun duka, karena aku percaya semuanya
-                adalah bagian dari proses pendewasaan diri.
-              </p><br>
-
+                Dia indah, dia mempesona, setiap senyumnya seakan mampu
+                menghapus semua lelah yang pernah ada. Ada ketenangan dalam
+                matanya, dan kehangatan dalam caranya tersenyum yang tak bisa
+                dijelaskan dengan kata-kata.
+              </p>
               <p>
-                Aku suka belajar hal-hal baru, mengeksplorasi berbagai
-                kemungkinan, dan selalu terbuka terhadap perubahan. Meski
-                terkadang aku merasa tidak sempurna, aku tetap bersyukur
-                atas apa yang aku miliki saat ini.
-              </p><br>
-
-              <p>
-                Bagiku, hidup adalah tentang bagaimana kita dapat memberikan
-                makna bagi orang lain. Aku selalu berusaha untuk membawa
-                dampak positif bagi orang-orang di sekitarku, sekecil
-                apapun itu.
-              </p><br>
-
-              <p>
-                Dalam perjalanan hidupku, aku telah belajar bahwa cinta
-                tidak harus selalu tentang memiliki. Terkadang, mencintai
-                berarti merelakan dan mendoakan yang terbaik untuk orang
-                yang kita sayangi dari jauh.
-              </p><br>
-
-              <p>
-                Aku percaya bahwa setiap pertemuan memiliki makna tersendiri.
-                Setiap orang yang hadir dalam hidupku telah mengajarkan
-                sesuatu yang berharga, dan aku bersyukur atas setiap
-                pelajaran hidup yang kudapatkan.
-              </p><br>
-
-              <p>
-                Di masa depan, aku berharap bisa terus berkembang menjadi
-                pribadi yang lebih baik. Aku ingin terus belajar, berbagi,
-                dan memberikan manfaat bagi orang lain. Karena bagiku,
-                kesuksesan sejati adalah ketika kita bisa menjadi berkat
-                bagi sesama.
+                Aku mengagumi hal-hal indah — langit sore, cahaya bulan, dan
+                dirinya. Semua memiliki pesona yang sama: menenangkan dari jauh,
+                namun terlalu berharga untuk digenggam. Mungkin begitulah cinta
+                yang sejati, bukan tentang kepemilikan, melainkan tentang
+                kekaguman yang tulus tanpa syarat.
               </p>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Popup & Audio -->
+
+    <!-- Popup Overlay -->
+    <div
+      class="fixed inset-0 bg-black/30 backdrop-blur-md transition-opacity hidden"
+      id="popup-overlay"
+    ></div>
+
+    <!-- Popup Modal -->
+    <div
+      id="popup"
+      class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/20 backdrop-blur-md animate-fadeIn"
+      aria-labelledby="modal-title"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div
+        class="relative w-full max-w-md p-6 rounded-3xl border border-white/30 bg-white/10 backdrop-blur-3xl shadow-[0_8px_40px_rgba(0,0,0,0.25)] transition-all duration-500 ease-out scale-95 hover:scale-100"
+      >
+        <!-- Glass gradient overlay -->
+        <div
+          class="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/10 via-pink-200/10 to-purple-200/10 pointer-events-none"
+        ></div>
+
+        <!-- Content -->
+        <div class="relative z-10 text-center space-y-4">
+          <!-- Ikon musik -->
+          <div
+            class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-purple-500 to-pink-400 shadow-lg shadow-purple-300/40 backdrop-blur-md"
+          >
+            <i class="fa-solid fa-music text-white text-2xl drop-shadow-md"></i>
+          </div>
+
+          <h3
+            class="text-2xl font-semibold text-white drop-shadow-lg"
+            id="modal-title"
+          >
+            Putar musik lembut?
+          </h3>
+
+          <p class="text-sm text-white/90 leading-relaxed tracking-wide px-2">
+            Biarkan alunan musik mengiringi setiap momen indah hari ini. Melodi
+            yang lembut akan membuat suasana terasa lebih hangat, tenang, dan
+            bermakna.
+          </p>
+        </div>
+
+        <!-- Tombol -->
+        <div
+          class="relative z-10 mt-6 flex flex-col sm:flex-row-reverse gap-3 justify-center"
+        >
+          <button
+            type="button"
+            onclick="playMusic()"
+            class="flex w-full sm:w-auto justify-center rounded-xl bg-gradient-to-r from-pink-500/80 to-purple-500/80 text-white px-5 py-2.5 text-sm font-medium shadow-md hover:from-pink-500 hover:to-purple-600 transform transition-all duration-300 hover:scale-[1.05] backdrop-blur-sm"
+          >
+            Ya, nyalakan musik 🎵
+          </button>
+          <button
+            type="button"
+            onclick="closePopup()"
+            class="flex w-full sm:w-auto justify-center rounded-xl border border-white/40 bg-white/20 backdrop-blur-md px-5 py-2.5 text-sm font-medium text-white/90 hover:bg-white/30 hover:text-white transform transition-all duration-300 hover:scale-[1.05]"
+          >
+            Tidak dulu
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <audio id="music" src="../../public/assets/music/aboutyou.mp3"></audio>
+
+    <!-- Footer -->
+    <section class="footer">
+      <div class="container">
+        <div class="footer-box">
+          <p>
+            &copy; Copyright by
+            <a href="https://sakibftrrhmn.vercel.app/"
+              ><span>sakibftrrhmn</span></a
+            >
+            2024, All Right Reserved.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pre Loader -->
+    <div class="loader">
+      <img src="../../public/assets/loader/loader.svg" alt="loading.io" />
+    </div>
+
+    <!-- JS -->
+    <script src="../../public/assets/dist/js/script.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+      // Ambil elemen yang diperlukan
+      const aboutSection = document.getElementById("about");
+      const popup = document.getElementById("popup");
+      const overlay = document.getElementById("popup-overlay");
+      const music = document.getElementById("music");
+
+      let hasShownPopup = false; // agar popup hanya muncul sekali
+
+      // Deteksi scroll
+      window.addEventListener("scroll", function () {
+        if (!aboutSection) return;
+
+        const sectionPosition = aboutSection.getBoundingClientRect();
+
+        // Jika bagian about terlihat di layar
+        if (
+          sectionPosition.top < window.innerHeight * 0.7 && // muncul sedikit sebelum tengah layar
+          sectionPosition.bottom >= 0 &&
+          !hasShownPopup
+        ) {
+          showPopup();
+          hasShownPopup = true;
+        }
+      });
+
+      // Tampilkan popup
+      function showPopup() {
+        popup.classList.remove("hidden");
+        overlay.classList.remove("hidden");
+      }
+
+      // Mainkan musik dan tutup popup
+      function playMusic() {
+        music.play();
+        closePopup();
+      }
+
+      // Tutup popup
+      function closePopup() {
+        popup.classList.add("hidden");
+        overlay.classList.add("hidden");
+      }
+    </script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
