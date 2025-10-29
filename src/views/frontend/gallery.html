@@ -363,7 +363,29 @@
         </div>
       </div>
     </div>
+    <section class="footer">
+      <div class="container">
+        <div class="footer-box">
+          <p>
+            &copy; Copyright by
+            <a href="https://sakibftrrhmn.vercel.app/"
+              ><span>sakibftrrhmn</span></a
+            >
+            2024, All Right Reserved.
+          </p>
+        </div>
+      </div>
+    </section>
 
+    <!-- Pre Loader -->
+    <div class="loader">
+      <img src="/assets/loader/loader.svg" alt="loading.io" />
+    </div>
+
+    <!-- JS -->
+    <script src="/assets/dist/js/script.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
       function openModal(image, desc) {
         document.getElementById("modalImage").src = "/image/" + image;
@@ -385,6 +407,10 @@
       function closeModal() {
         document.getElementById("imageModal").classList.add("hidden");
       }
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
   </body>
 </html>
