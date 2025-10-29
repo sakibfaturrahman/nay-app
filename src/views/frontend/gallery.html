@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gallery Viani</title>
+    <title>About Ibnatun Octaviani Jahroo Fatihah</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -48,9 +48,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     />
     <!-- Jonsuh Hamburger -->
-    <link rel="stylesheet" href="../../public/assets/dist/css/hamburgers.css" />
+    <link rel="stylesheet" href="/assets/dist/css/hamburgers.css" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../../public/assets/dist/css/style.css" />
+    <link rel="stylesheet" href="/assets/dist/css/style.css" />
   </head>
   <body class="bg-white text-gray-900 font-sans">
     <!-- Navbar -->
@@ -62,17 +62,23 @@
           </div>
           <ul class="menu">
             <li>
-              <a href="#home"><i class="fa-solid fa-house"></i>Home</a>
+              <a href="http://localhost:3000/"
+                ><i class="fa-solid fa-house"></i>Home</a
+              >
             </li>
             <li>
-              <a href="#about"><i class="fa-solid fa-list"></i>About</a>
+              <a href="http://localhost:3000/about"
+                ><i class="fa-solid fa-list"></i>About</a
+              >
             </li>
             <li>
-              <a href="#gallery"><i class="fa-solid fa-image"></i>Gallery</a>
+              <a href="http://localhost:3000/gallery"
+                ><i class="fa-solid fa-image"></i>Gallery</a
+              >
             </li>
           </ul>
           <a
-            href="../../public/selamatberulangtahun.pdf"
+            href="/selamatberulangtahun.pdf"
             download
             class="about-button"
             style="text-decoration: none"
@@ -84,33 +90,32 @@
             ></span>
           </button>
         </div>
-        <div class="hero">
+        <div class="hero text-center">
           <h1 class="animate__animated animate__fadeInUp animate__delay-3s">
-            <span id="t1">About Viani</span> <br />
-            <span id="t2">Her Presence Speaks Where Words Fall Silent</span>
+            <span id="t1">Gallery of Viani</span> <br />
+            <span id="t2">Every Picture Holds a Quiet Story</span>
           </h1>
-          <div class="hero-jargon">
+
+          <div class="hero-jargon mt-6 max-w-3xl mx-auto">
             <div class="animate__animated animate__fadeInUp animate__delay-1s">
               <p>
                 <span>
-                  Tentang seseorang yang tak hanya hadir di mataku, tapi juga
-                  menetap di pikiranku dengan cara yang tak pernah kuminta.
-                  Kehadirannya sederhana, tapi cukup untuk membuat dunia di
-                  sekitarku terasa berbeda. Ada sesuatu dalam caranya tersenyum,
-                  dalam tatapannya yang tenang, seolah waktu berhenti hanya
-                  untuk membiarkanku menikmati detik itu.</span
-                >
+                  Ini bukan sekadar kumpulan gambar, melainkan potongan waktu
+                  yang berhenti sejenak — menangkap senyum, cahaya, dan
+                  ketenangan dalam setiap momen bersamanya. Setiap foto memiliki
+                  ceritanya sendiri, berbisik lembut tentang keindahan yang
+                  sederhana.
+                </span>
               </p>
             </div>
+
             <div class="animate__animated animate__fadeInUp animate__delay-1s">
               <p>
                 <span>
-                  Aku tidak tahu bagaimana semuanya dimulai, tapi sejak saat
-                  itu, setiap pagi terasa lebih hangat, dan setiap senja membawa
-                  namanya dalam diam. Dia bukan sekadar seseorang yang lewat,
-                  dia adalah bagian kecil dari hidupku yang tanpa kusadari telah
-                  tumbuh menjadi besar.</span
-                >
+                  Di sini, waktu terasa diam. Setiap sudut, setiap warna,
+                  mengingatkan bahwa kenangan tak selalu perlu kata-kata. Kadang
+                  cukup satu pandangan — dan semuanya terasa hidup kembali.
+                </span>
               </p>
             </div>
           </div>
@@ -121,7 +126,7 @@
     <!-- Gallery Section -->
     <section class="pt-20 pb-16 px-4">
       <div class="max-w-6xl mx-auto text-center mb-10">
-        <h2 class="text-3xl font-semibold mb-2">Galeri Kenangan</h2>
+        <h2 class="text-3xl font-semibold mb-2">Random Pict Viani</h2>
         <p class="text-gray-600">
           Setiap gambar menyimpan kisah, setiap senyum membawa makna yang tak
           terucap.
@@ -132,14 +137,14 @@
       <div
         class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-6xl mx-auto"
       >
-        <!-- Gambar contoh -->
+        <!-- Galeri 1–54 -->
         <div
           class="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-md cursor-pointer group"
           onclick="openModal('1.jpg','Momen sederhana yang berarti banyak.')"
         >
           <img
-            src="../../public/image/1.jpg"
-            alt="viani"
+            src="/image/1.jpg"
+            alt="viani 1"
             class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
         </div>
@@ -149,8 +154,8 @@
           onclick="openModal('2.jpg','Senyum lembut di antara cahaya sore hari.')"
         >
           <img
-            src="../../public/image/2.jpg"
-            alt="viani"
+            src="/image/2.jpg"
+            alt="viani 2"
             class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
         </div>
@@ -160,8 +165,8 @@
           onclick="openModal('3.jpg','Tatapan yang menenangkan, sederhana tapi berarti.')"
         >
           <img
-            src="../../public/image/3.jpg"
-            alt="viani"
+            src="/image/3.jpg"
+            alt="viani 3"
             class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
         </div>
@@ -171,11 +176,145 @@
           onclick="openModal('4.jpg','Kenangan kecil yang tak akan pudar.')"
         >
           <img
-            src="../../public/image/4.jpg"
-            alt="viani"
+            src="/image/4.jpg"
+            alt="viani 4"
             class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
         </div>
+
+        <div
+          class="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-md cursor-pointer group"
+          onclick="openModal('5.jpg','Tawa yang membuat dunia terasa ringan.')"
+        >
+          <img
+            src="/image/5.jpg"
+            alt="viani 5"
+            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
+
+        <div
+          class="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-md cursor-pointer group"
+          onclick="openModal('6.jpg','Langkah kecil menuju kenangan besar.')"
+        >
+          <img
+            src="/image/6.jpg"
+            alt="viani 6"
+            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
+
+        <div
+          class="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-md cursor-pointer group"
+          onclick="openModal('7.jpg','Sore yang hangat dengan senyum lembutnya.')"
+        >
+          <img
+            src="/image/7.jpg"
+            alt="viani 7"
+            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
+
+        <div
+          class="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-md cursor-pointer group"
+          onclick="openModal('8.jpg','Ketenangan yang hadir tanpa suara.')"
+        >
+          <img
+            src="/image/8.jpg"
+            alt="viani 8"
+            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
+
+        <div
+          class="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-md cursor-pointer group"
+          onclick="openModal('9.jpg','Waktu berhenti sejenak di sini.')"
+        >
+          <img
+            src="/image/9.jpg"
+            alt="viani 9"
+            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
+
+        <div
+          class="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-md cursor-pointer group"
+          onclick="openModal('10.png','Cahaya pagi yang menyapa lembut.')"
+        >
+          <img
+            src="/image/10.png"
+            alt="viani 10"
+            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
+
+        <script>
+          const container = document.currentScript.parentElement;
+          const descriptions = [
+            "Ini dia, langkah lembut yang meninggalkan kesan di setiap jejaknya.",
+            "Ini dia, wajah yang memancarkan pesona tanpa perlu banyak bicara.",
+            "Ini dia, tatapan tenang yang mampu menenangkan hati siapa pun.",
+            "Ini dia, senja yang tersenyum lembut lewat pesona dirinya.",
+            "Ini dia, bayangan manis yang menari di bawah cahaya matahari.",
+            "Ini dia, hangatnya sederhana tapi mampu mengisi ruang hati.",
+            "Ini dia, senyum lembut yang membuat dunia terasa damai.",
+            "Ini dia, cahaya yang membuat bayangan pun terlihat indah.",
+            "Ini dia, keindahan yang tak perlu dihias dengan kata-kata.",
+            "Ini dia, sekilas pandang yang sulit dilupakan.",
+            "Ini dia, senyum cerah di bawah langit biru yang menenangkan.",
+            "Ini dia, kehadiran yang membuat waktu seakan berhenti.",
+            "Ini dia, langkah pasti menuju hari yang penuh harapan.",
+            "Ini dia, pesona yang tumbuh dari ketulusan hatinya.",
+            "Ini dia, sinar mentari yang membingkai wajah penuh cerita.",
+            "Ini dia, hening yang berbicara lewat pancaran matanya.",
+            "Ini dia, senja yang memantulkan cahaya dari jiwanya.",
+            "Ini dia, diam yang memiliki seribu makna indah.",
+            "Ini dia, tawa kecil yang mampu menghapus lelah.",
+            "Ini dia, siluet lembut yang abadi dalam kenangan.",
+            "Ini dia, senyum teduh di bawah cahaya sore.",
+            "Ini dia, wajah cerah seterang langit setelah hujan.",
+            "Ini dia, momen singkat yang ingin terus diulang.",
+            "Ini dia, ketenangan yang datang hanya dengan memandangnya.",
+            "Ini dia, lembut seperti angin sore yang menyapa pelan.",
+            "Ini dia, cahaya yang menembus jendela hati dengan lembut.",
+            "Ini dia, tatapan tulus yang tak bisa disembunyikan.",
+            "Ini dia, kenangan yang tetap hidup di balik cahaya.",
+            "Ini dia, pagi cerah yang hadir lewat senyumnya.",
+            "Ini dia, kisah indah yang terukir dalam diam.",
+            "Ini dia, senja yang menyimpan rahasia di balik matanya.",
+            "Ini dia, mata yang berbicara tanpa perlu suara.",
+            "Ini dia, hari yang damai bersama bayangan dirinya.",
+            "Ini dia, cahaya lembut di antara dedaunan yang berbisik.",
+            "Ini dia, senyumnya yang menyatu dengan birunya langit.",
+            "Ini dia, kehadiran yang terasa seperti mimpi indah.",
+            "Ini dia, langkahnya yang meninggalkan kehangatan.",
+            "Ini dia, siluet yang tak pudar dalam ingatan waktu.",
+            "Ini dia, cinta sederhana yang begitu tulus terasa.",
+            "Ini dia, hening yang mampu menenangkan hati.",
+            "Ini dia, pandangan yang terus teringat di benak.",
+            "Ini dia, senyum yang membuat dunia lebih berwarna.",
+            "Ini dia, lembayung sore yang memantulkan pesonanya.",
+            "Ini dia, pandangan yang membuat waktu seolah berhenti.",
+            "Ini dia, kenangan yang tak lekang oleh waktu.",
+            "Ini dia, kehangatan yang tak pernah tergantikan.",
+            "Ini dia, sinar lembut yang membawa ketenangan.",
+            "Ini dia, kenangan yang bahkan hujan pun tak bisa hapus.",
+            "Ini dia, senyumnya yang jadi alasan seseorang tersenyum hari ini.",
+          ];
+
+          for (let i = 11; i <= 56; i++) {
+            const desc =
+              descriptions[i - 11] || "Momen indah yang terekam abadi.";
+            const div = document.createElement("div");
+            div.className =
+              "relative aspect-[3/4] overflow-hidden rounded-2xl shadow-md cursor-pointer group";
+            div.setAttribute("onclick", `openModal('${i}.jpg','${desc}')`);
+            div.innerHTML = `
+        <img src='/image/${i}.jpg' alt='viani ${i}' class='h-full w-full object-cover transition-transform duration-300 group-hover:scale-105' />
+      `;
+            container.appendChild(div);
+          }
+        </script>
       </div>
     </section>
 
@@ -232,8 +371,7 @@
 
     <script>
       function openModal(image, desc) {
-        document.getElementById("modalImage").src =
-          "../../public/image/" + image;
+        document.getElementById("modalImage").src = "/image/" + image;
         document.getElementById("modalDescription").innerText = desc;
 
         // Share link dinamis
